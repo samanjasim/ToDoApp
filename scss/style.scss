@@ -1,0 +1,137 @@
+@import 'variables';
+@import 'mixin';
+
+body{
+    background: $gray;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+}
+
+h2, h3, h4, h5 {
+    color: $purple;
+}
+
+.text-purple {
+    color: $purple;
+}
+
+nav {
+    .navbar-brand {
+        font-size: 24px;
+    }
+}
+
+main.home {
+    color: $blue;
+    margin-top: 20px;
+    
+    #status {
+        color: $red;
+        font-size: 18px;
+        font-weight: 600;
+    }
+    
+    .title > p {
+        font-size: 38px;
+        margin-bottom: 40px;
+        #person-name {
+            color: $purple;
+        }
+    }
+    
+    .box {
+        border: 1px solid $purple;
+        .box-add{
+            h3 {
+                margin-top: 20px;
+                color: $black;
+                text-transform: uppercase;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+        }
+        
+        .form-control {
+            background: $black;
+            color: #FFF;
+        }
+        
+        textarea::-webkit-input-placeholder {
+            color: #e3e3e3 !important;
+        }
+
+        textarea:-moz-placeholder { 
+            color: #e3e3e3 !important;
+        }
+
+        textarea::-moz-placeholder {
+            color: #e3e3e3 !important;
+        }
+
+        textarea:-ms-input-placeholder {
+            color: #e3e3e3 !important;
+        }
+        
+        textarea {
+            resize: none;
+        }
+    }
+    
+    .tasks {
+        border: 1px solid $purple;
+        background: $black;
+        h3 {
+            margin-top: 20px;
+            color: #FFF;
+            text-transform: uppercase;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .panel{
+            .panel-heading {
+                color: $purple;
+                h4 {
+                    font-size: 24px;
+                }
+            }
+        }
+        
+        .task-list {
+            display: none;
+        }
+        
+        .task-item {
+            padding: 10px;
+            text-align: justify;
+            background: #FFF;
+            margin: 20px 0;
+            .task-header {
+                color: $purple;
+                font-size: 24px;
+            }
+            
+            .task-body {
+                margin-top: 20px;
+            }
+        }
+    }
+}
+
+footer {
+    padding: 10px 0;
+    margin-top: 20px;
+    background: $black;
+    color: $gray;
+    p {
+        margin: 0;
+        a {
+            font-size: 16px;
+            &:hover {
+                color: lighten($purple, 15%);
+            }
+        }
+    }
+    
+    font-size: 14px;
+}

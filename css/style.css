@@ -1,0 +1,87 @@
+body {
+  background: #bdc3c7;
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px; }
+
+h2, h3, h4, h5 {
+  color: #9b59b6; }
+
+.text-purple {
+  color: #9b59b6; }
+
+nav .navbar-brand {
+  font-size: 24px; }
+
+main.home {
+  color: #3498db;
+  margin-top: 20px; }
+  main.home #status {
+    color: #e74c3c;
+    font-size: 18px;
+    font-weight: 600; }
+  main.home .title > p {
+    font-size: 38px;
+    margin-bottom: 40px; }
+    main.home .title > p #person-name {
+      color: #9b59b6; }
+  main.home .box {
+    border: 1px solid #9b59b6; }
+    main.home .box .box-add h3 {
+      margin-top: 20px;
+      color: #34495e;
+      text-transform: uppercase;
+      text-align: center;
+      margin-bottom: 20px; }
+    main.home .box .form-control {
+      background: #34495e;
+      color: #FFF; }
+    main.home .box textarea::-webkit-input-placeholder {
+      color: #e3e3e3 !important; }
+    main.home .box textarea:-moz-placeholder {
+      color: #e3e3e3 !important; }
+    main.home .box textarea::-moz-placeholder {
+      color: #e3e3e3 !important; }
+    main.home .box textarea:-ms-input-placeholder {
+      color: #e3e3e3 !important; }
+    main.home .box textarea {
+      resize: none; }
+  main.home .tasks {
+    border: 1px solid #9b59b6;
+    background: #34495e; }
+    main.home .tasks h3 {
+      margin-top: 20px;
+      color: #FFF;
+      text-transform: uppercase;
+      text-align: center;
+      margin-bottom: 20px; }
+    main.home .tasks .panel .panel-heading {
+      color: #9b59b6; }
+      main.home .tasks .panel .panel-heading h4 {
+        font-size: 24px; }
+    main.home .tasks .task-list {
+      display: none; }
+    main.home .tasks .task-item {
+      padding: 10px;
+      text-align: justify;
+      background: #FFF;
+      margin: 20px 0; }
+      main.home .tasks .task-item .task-header {
+        color: #9b59b6;
+        font-size: 24px; }
+      main.home .tasks .task-item .task-body {
+        margin-top: 20px; }
+
+footer {
+  padding: 10px 0;
+  margin-top: 20px;
+  background: #34495e;
+  color: #bdc3c7;
+  font-size: 14px; }
+  footer p {
+    margin: 0; }
+    footer p a {
+      font-size: 16px; }
+      footer p a:hover {
+        color: #bb8ecd; }
+
+/*# sourceMappingURL=style.css.map */
