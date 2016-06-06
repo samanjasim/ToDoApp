@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ToDo App</title>
+        <meta charset="utf-8">
+        
+        <!-- for IE -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <!-- mobile first -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- font awasome CDN -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        
+        <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+        
+        <!-- Bootstrap CSS-->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        
+        <!--[if lt IE 9]>
+            <script src="js/html5shiv.min.js"></script>
+            <script src="js/respond.js"></script>
+        <![endif]-->
+    </head>
+    
+    <body>
+        
+        <nav class="navbar navbar-inverse">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target='#myNavbar'>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="#" class="navbar-brand"><span class="text-purple">ToDo</span> App</a>
+                </div><!-- navbar header-->
+                
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="https://www.facebook.com/saman.jassim.7"><span class="fa fa-facebook fa-lg"></span></a></li>
+                        <li><a href="http://codepen.io/Saman_Jasim/"><span class="fa fa-codepen fa-lg"></span></a></li>
+                        <li><a href="https://github.com/samanjasim"><span class="fa fa-github fa-lg"></span></a></li>
+                    </ul>
+                </div><!-- navbar-collapse -->
+            </div><!-- container -->
+        </nav><!-- navbar -->
+        
+        <main class="home margin-top-80">
+            <div class="container text-center">
+                <div class="row">
+                    
+                    <div class="col-sm-6">
+                        <div class="box">
+                            
+                            <div class="box-add">
+                                <h3>add task from here</h3>
+                                
+                                <p id="status"></p>
+                                
+                                <form class="form-horizontal">
+                                    <div class="form-group margin-top-20">
+                                        <label class="control-label col-sm-4">task name:</label>
+                                        <div class="col-sm-8">
+                                            <input type="text" class="form-control" id="task-name-input" name="task-name-input" required> 
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label class="control-label col-sm-4">task Date:</label>
+                                        <div class="col-sm-8">
+                                            <input type="date" class="form-control" id="task-date-input" name="task-date-input" required> 
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label class="control-label col-sm-4">description :</label>
+                                        <div class="col-sm-8">
+                                            <textarea class="form-control" id="task-desc-input" name="task-desc-input" rows="7" placeholder="write description to your task if you want!!! (1425 character)" maxlength="1425"></textarea> 
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group text-left">
+                                        <div class="col-sm-8 col-sm-offset-4">
+                                            <button type="button" id="add-task" class="btn btn-default">add Task</button>
+                                        </div>
+                                    </div>
+                                    
+                                </form>
+                                
+                                
+                            </div><!-- box add -->
+                            
+                        </div><!-- box -->
+                    </div><!-- col-6 -->
+                    
+                    <div class="col-sm-6">
+                        <div class="tasks">
+                            <h3>Your Task List</h3>
+                            <!-- if there is No Task yet this div will display -->
+                            <div id="init-panel" class="panel panel-default text-justify">
+                                <div class="panel-heading">
+                                    <h4>Task Manger</h4>
+                                </div>
+                                
+                                <div class="panel-body">
+                                    <ul class="">
+                                        <li>This App will Help you to Remeber your task and Manage Your Time</li>
+                                        <li>You can Start Add your Task and it will be displayed here</li>
+                                        
+                                    </ul>
+                                </div>
+                                
+                            </div>
+                            
+                            
+                            <!-- List for the Tasks -->
+                            <ul class="list-unstyled task-list">
+                                <li class="task-item">
+                                    <h4 class="task-header">
+                                        <span class="pull-left task-name">Task name</span>
+                                        <span class="pull-right task-date">11/6/2016</span>
+                                        <div class="clearfix"></div>
+                                    </h4>
+                                    
+                                    <div class="task-body">
+                                        <p>Ut illum deserunt ingeniis, occaecat sunt elit ne labore. Commodo si nulla do 
+                                            sint o mandaremus ad quae id ea nisi lorem enim admodum, ad summis singulis. 
+                                            Doctrina ab aliqua.</p>
+                                    </div>
+                                    
+                                    <div class="task-footer">
+                                        <button class="btn btn-default"><span class="fa fa-trash-o fa-lg"></span></button>
+                                        <button class="btn btn-default"><span class="fa fa-pencil fa-lg"></span></button>
+                                    </div>
+                                    
+                                </li>
+                                
+                                <li class="task-item">
+                                    <h4 class="task-header">
+                                        <span class="pull-left task-name">Task name</span>
+                                        <span class="pull-right task-date">11/6/2016</span>
+                                        <div class="clearfix"></div>
+                                    </h4>
+                                    
+                                    <div class="task-body">
+                                        <p>Ut illum deserunt ingeniis, occaecat sunt elit ne labore. Commodo si nulla do 
+                                            sint o mandaremus ad quae id ea nisi lorem enim admodum, ad summis singulis. 
+                                            Doctrina ab aliqua.</p>
+                                    </div>
+                                    
+                                    <div class="task-footer">
+                                        <button class="btn btn-default" data-toggle="modal" data-target="#removeModal"><span class="fa fa-trash-o fa-lg"></span></button>
+                                        <button class="btn btn-default" data-toggle="modal" data-target="#editModal"><span class="fa fa-pencil fa-lg"></span></button>
+                                    </div>
+                                </li>
+                            </ul>
+                            
+                            <div id="removeModal" class="modal fade">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                            <h4>Delete Task</h4>
+                                        </div>
+                                        
+                                        <div class="modal-body">
+                                            <p>Are you Sure you want to Delete this Task from your Schedule?</p>
+                                            <button type="button" class="btn btn-danger" id="delete-btn" data-dismiss="modal">Yes! Delete</button>
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+                                        </div>
+                                        
+                                    </div><!-- modal content -->
+                                </div><!-- modal dialog -->
+                            </div><!-- remove Modal -->
+                            
+                            <div id="edit-modal" class="modal fade">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                            <h4>Edit the Task</h4>
+                                        </div>
+                                        
+                                        <div class="modal-body">
+                                            <form class="form-horizontal">
+                                                <div class="form-group margin-top-20">
+                                                    <label class="control-label col-sm-4">task name:</label>
+                                                    <div class="col-sm-8">
+                                                        <input type="text" class="form-control" id="modal-task-name" name="task-name-input" required> 
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label class="control-label col-sm-4">task Date:</label>
+                                                    <div class="col-sm-8">
+                                                        <input type="date" class="form-control" id="modal-task-date" name="task-date-input" required> 
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label class="control-label col-sm-4">description :</label>
+                                                    <div class="col-sm-8">
+                                                        <textarea class="form-control" id="modal-task-desc" name="task-desc-input" rows="7" placeholder="write description to your task if you want!!! (1425 character)" maxlength="1425"></textarea>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                            
+                                        </div><!-- modal body -->
+                                        
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-danger" id="edit-btn" data-dismiss="modal">Edit</button>
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                                        </div>
+                                        
+                                    </div><!-- modal content -->
+                                </div><!-- modal dialog -->
+                            </div><!-- modal -->
+                        </div>
+                    </div>
+                    
+                </div><!-- row -->
+            </div><!-- container -->
+        </main>
+        
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/task.js"></script>
+        
+        <footer class="text-center">
+            <p>copyright &copy; 2016 <a href="#" class="text-purple">Saman Jasim</a>, all right reserved</p>
+        </footer>
+    </body>
+    
+</html>
